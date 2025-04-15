@@ -1,12 +1,12 @@
 import extractorSvlete from '@unocss/extractor-svelte';
 import { presetFluidSizing } from 'unocss-preset-fluid-sizing';
-import { defineConfig, presetTypography, presetWind4, presetWebFonts } from 'unocss';
+import { defineConfig, presetTypography, presetWind3, presetWebFonts } from 'unocss';
 
 export default defineConfig({
   presets: [
     presetFluidSizing(),
     presetWebFonts({
-      themeKey: 'font',
+      //themeKey: 'font',
       fonts: {
         //epic: 'Almendra SC',
         //book: 'Felipa',
@@ -17,7 +17,7 @@ export default defineConfig({
       }
     }),
     presetTypography(),
-    presetWind4({
+    presetWind3({
       reset: true,
     }),
   ],

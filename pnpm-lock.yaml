@@ -57,6 +57,9 @@ importers:
       svelte-check:
         specifier: ^4.0.0
         version: 4.1.6(picomatch@4.0.2)(svelte@5.26.3)(typescript@5.8.3)
+      svelte-intersection-observer-action:
+        specifier: ^0.0.5
+        version: 0.0.5
       typescript:
         specifier: ^5.0.0
         version: 5.8.3
@@ -1410,6 +1413,9 @@ packages:
     peerDependenciesMeta:
       svelte:
         optional: true
+
+  svelte-intersection-observer-action@0.0.5:
+    resolution: {integrity: sha512-d5WVlE3Dpxx554cOYBm9BkIfba0+/r1O1yKuekQH/ScXW78mNB+R7A/LSfmGTFBNHvqjPZ9Vehfx1iIJti1saw==}
 
   svelte@5.26.3:
     resolution: {integrity: sha512-SgDfx70CmW8Rev9XRu5sN/3Paa/mSh3DGxDDEgtecdjbhLrmgK18McanP+gNE8HYGm8tXiXZN3Fn31NcqBML+Q==}
@@ -2912,6 +2918,8 @@ snapshots:
       postcss-selector-parser: 7.1.0
     optionalDependencies:
       svelte: 5.26.3
+
+  svelte-intersection-observer-action@0.0.5: {}
 
   svelte@5.26.3:
     dependencies:
