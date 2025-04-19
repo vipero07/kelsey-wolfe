@@ -1,20 +1,21 @@
 <script lang="ts">
 	const { children } = $props();
-
-	let scrollY = $state(0);
-	let innerHeight = $state(0);
-	const halfHeight = $derived(innerHeight / 2);
-	const heightPercent = $derived(((halfHeight - scrollY) / innerHeight) * 100);
-	const translateY = $derived(`clamp(0px, ${heightPercent}vh, calc(50vh - 50%))`);
-	const translateX = $derived(`clamp(0px, ${heightPercent}vw, calc(50vw - 50%))`);
 </script>
 
-<svelte:window bind:scrollY bind:innerHeight />
-
-<h1
-	class="font-middle f-text-4xl fixed top-0 transition-translate m-0"
-	style="transform: translateY({translateY}) translateX({translateX});"
->
-	Kelsey Wolfe
-</h1>
+<h1 class="font-middle f-text-4xl fixed top-0 transition-translate m-0">Kelsey Wolfe</h1>
 {@render children()}
+
+<style>
+	@keyframes translate-header {
+		from {
+			transform: translateX(calc(50vw - 50%)) translateY(calc(50vh - 50%));
+		}
+		to {
+			transform: translateX(0px) translateY(0px);
+		}
+	}
+	h1 {
+		animation: translate-header linear both;
+		animation-timeline: scroll(block root);
+	}
+</style>
