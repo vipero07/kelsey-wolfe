@@ -21,5 +21,6 @@
 		transform: translateX(calc(50vw - 50%)) translateY(calc(50vh - 50%));
 		animation: translate-header linear both;
 		animation-timeline: scroll(block root);
+		animation-range: 0px 300px;
 	}
 </style>
